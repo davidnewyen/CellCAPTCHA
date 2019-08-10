@@ -25,7 +25,8 @@
     <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
     <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
+    <!-- bootstrap-progressbar -->
+    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
   </head>
@@ -62,15 +63,9 @@
                     <li><a href="index3.html">The science results</a></li>
                     </ul>
                   </li>
-                    <li><a href="chartjs.html"><i class="fa fa-list-alt"></i> Rules </a>
+                    <li><a><i class="fa fa-list-alt"></i> Rules </a>
                   </li>
-                    <li><a><i class="fa fa-bug"></i> Play <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                          <li><a href="play1.html">Game 1 - How old am I ?</a></li>
-                          <li><a href="play2.html">Game 2 - From youngest to oldest </a></li>
-                        <li><a href="play3.html">Game 3 - Who is the intruder ? </a></li>
-                        </ul>
-                  </li>
+                    <li><a><i class="fa fa-bug"></i> Play <span class="fa fa-chevron-down"></span></a>                         <ul class="nav child_menu">                           <li><a href="play1.html">Game 1 - How old am I ?</a></li>                           <li><a href="play2.html">Game 2 - From youngest to oldest </a></li>                         <li><a href="play3.html">Game 3 - Who is the intruder ? </a></li>                         </ul>                   </li>
                     
                 </ul>
               </div>
@@ -192,164 +187,104 @@
           </div>
         </div>
         <!-- /top navigation -->
+               <!-- RELEVANT -->
+                
+                <!-- page content -->
+                <div class="right_col" role="main" style="padding-bottom: 20px">
+                    <div class="">
 
-        <!-- page content -->
-        <div class="right_col" role="main">
-          <!-- top tiles -->
-          <div class="row tile_count">
-              <h3>Your results in a few words</h3>
-            <div class="col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total questions answered</span>
-              <div class="count">500</div>
-              <span class="count_bottom"><i class="green">4% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Total Time</span>
-              <div class="count">12h</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Points</span>
-              <div class="count green">2,500</div>
-              <span class="count_bottom"><i class="green"></i> ... all of them for stem cells science !</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Points for your team</span>
-              <div class="count">12,567</div>
-              <span class="count_bottom"><i class="red"></i>Carry on !</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Rank</span>
-              <div class="count">122nd </div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>-12 ranks </i> This Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Team Rank</span>
-              <div class="count">33rd</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>-1 rank </i>This week </span>
-            </div>
-          </div>
-          <!-- /top tiles -->
-            
-          <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Activity this year</h2>
-                      <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <canvas id="mybarChart"></canvas>
-                  </div>
-                </div>
-              </div>
+                        <!-- Top banner -->
+                        <div style="position:relative; width: 30%;margin-bottom: 30px; margin-left: 35%; margin-right: 35%">
+                            <div class="x_panel" style="padding: 10px;border: none">
+                                <div class="title">
+                                    <div style="text-align:left;">
+                                        
+                                        <h2> Your score </h2>
+                                        <div style="float: left;    font-size: 20px;color: gold;"><span class="glyphicon glyphicon-glass" aria-hidden="true"></span></div>
+                                        <div class="progress" style="margin-left: 25px; margin-bottom:15px ">
+                                            <div class="progress-bar progress-bar-warning" data-transitiongoal="45"></div>
+                                        </div>
+                                        <div style="float: left;font-size: 20px;color: silver;"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></div>
+                                        <div class="progress" style="margin-left: 25px; margin-bottom:15px">
+                                            <div class="progress-bar progress-bar-info" data-transitiongoal="65"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="x_panel tile fixed_height_320 overflow_hidden">
-                <div class="x_title">
-                  <h2>Cells classified</h2>
-                  <div class="clearfix"></div>
+                        <!-- Middle content -->
+                        <div>
+                            <h2 style="text-align: center; margin: 25px;font-size: 24px"> Can you identify the maturation stage of this cell ? </h2>
+                            <table style="width:100%; margin-bottom: 35px">
+                                <tr>
+                                    
+                                    <!-- left side -->
+                                    <td style="width:50%;">
+                                        <img src="images/Practice.jpg" width="80%" height="auto" style="padding: 0% 0% 3% 5%">
+                                    </td>
+                                    
+                                    <!-- right side -->
+                                    <td style="width:50%;">
+                                        <ul style="vertical-align:text-top; list-style:none; padding-right: 5%">
+                                            <li style="vertical-align:text-top; padding-bottom: 2%">
+                                                <button style="width:85%; border:none;padding: 2%; position:relative; margin-left: 0%;" type="button" class="btn btn-default btn-lg"><a href="play1.html">Stage 1 - iPSC</a></button>
+                                            </li>
+                                            <li style="vertical-align:text-top; padding-bottom: 2%">
+                                                <button style="width:85%;border:none; padding: 2%; position:relative; margin-left: 0%;" type="button" class="btn btn-default btn-lg"><a href="play1.html">Stage 2 - Patterning</a></button>
+                                            </li>
+                                            <li style="vertical-align:text-top; padding-bottom: 2%">
+                                                <button style="width:85%;border:none; padding: 2%; position:relative; margin-left: 0%;" type="button" class="btn btn-default btn-lg"><a href="play1.html">Stage 3 - Progenitors</a></button>
+                                            </li>
+                                            <li style="vertical-align:text-top; padding-bottom: 2%">
+                                                <button style="width:85%;border:none; padding: 2%; position:relative; margin-left: 0%;" type="button" class="btn btn-default btn-lg"><a href="play1.html">Stage 4 - Maturation</a></button>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- Bottom banner -->
+                        <div style="text-align: center; text-decoration: underline">
+                            <a href="menu_play1.html" class="to_register" style="margin: 10px"> Skip this question </a>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="x_content">
-                  <table class="" style="width:100%">
-                    <tr>
-                      <td>
-                        <canvas class="canvasDoughnut" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
-                      </td>
-                      <td>
-                        <table class="tile_info">
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square blue"></i>Type 1 </p>
-                            </td>
-                            <td>30%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square green"></i>Type 2 </p>
-                            </td>
-                            <td>10%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square purple"></i>Type 3 </p>
-                            </td>
-                            <td>20%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square aero"></i>Type 4 </p>
-                            </td>
-                            <td>15%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square red"></i>Type 5 </p>
-                            </td>
-                            <td>30%</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
+                <!-- /page content -->
+
+                <!-- footer content -->
+                <footer>
+                    <div class="pull-right">
+                        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
+                <!-- /footer content -->
             </div>
         </div>
-   </div>
-        <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
-      </div>
-    </div>
 
-           
+        <div id="custom_notifications" class="custom-notifications dsp_none">
+            <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+            </ul>
+            <div class="clearfix"></div>
+            <div id="notif-group" class="tabbed_notifications"></div>
+        </div>
 
-    <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- Chart.js -->
-    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
-    <!-- gauge.js -->
-    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- iCheck -->
-    <script src="../vendors/iCheck/icheck.min.js"></script>
-    <!-- Skycons -->
-    <script src="../vendors/skycons/skycons.js"></script>
-    <!-- Flot -->
-    <script src="../vendors/Flot/jquery.flot.js"></script>
-    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="../vendors/Flot/jquery.flot.time.js"></script>
-    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
-    <!-- Flot plugins -->
-    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
-    <!-- DateJS -->
-    <script src="../vendors/DateJS/build/date.js"></script>
-    <!-- JQVMap -->
-    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
-    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="../vendors/moment/min/moment.min.js"></script>
-    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <!-- jQuery -->
+        <script src="../vendors/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- FastClick -->
+        <script src="../vendors/fastclick/lib/fastclick.js"></script>
+        <!-- NProgress -->
+        <script src="../vendors/nprogress/nprogress.js"></script>
+        <!-- bootstrap-progressbar -->
+        <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 
-    <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
-	
-  </body>
+        <!-- Custom Theme Scripts -->
+        <script src="../build/js/custom.min.js"></script>
+
+    </body>
 </html>
