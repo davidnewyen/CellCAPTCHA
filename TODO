@@ -1,0 +1,38 @@
+Reference sources for EVE online GUI:
+https://www.google.com/search?q=eve+online+cell+recognition&rlz=1C1RLNS_enAU791AU791&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjDjZad9fbjAhXC4HMBHUvjCzoQ_AUIESgB&biw=1920&bih=975#imgrc=gPPXe7vYdZGYwM
+https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DBAMr3AnQYeo%26fbclid%3DIwAR1UqimSpjhTSPVLGUXcioOwm8IJfSKHW1yocyBXTMe1ZxRB0bYZ_OxbGaQ&h=AT0K_xJy9y8yoD4D2hpgOTux0593FqTgaHFWMD56EN1vpSDUYdJwsn5ExrffS-jOkgxKQbuZ2VhGeMhZY_XxYLkzBUEvJIRJYtVP8yBBeSoiQ_RPogmxXBzR3_SqBNBgUi2GqQ
+
+Purpose of our project:
+- What to pitch in first PING (what team is, goals for next PING, progress so far, who may need extra, problems)
+- Logo ideas
+- Game
+- Pure reCAPTCHA
+- Address questions from Zian's FB speel
+
+Gameplay structure:
+- Watch EVE online video
+- Progression of user's exercises on same picture
+- How to structure exercises:
+    - Group by cell type, but progress by difficulty
+
+Gameplay exercises
+- Watch EVE online video
+
+How to make gameplay more interesting and balanced:
+- Timer
+- Mastery system (like Language Perfect with stars)
+- User votes on quality/fairness/suitability of photos
+- Display stats of the current photo to player (i.e. how accurate players have been on that photo)
+
+Player training/validation/qualification process:
+- Only allow through if reached certain # of that cell type
+
+Visualisations:
+- Player info visualisations
+    - Star map style, spikes per:
+        - Cell type
+        - Cell feature
+- Ranking system for players vs each other
+    - Globally
+    - Cross-university/institutions
+- Compare Machine Learning data and player data (which is more accurate??)
