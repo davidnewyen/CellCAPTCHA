@@ -54,7 +54,7 @@ An example data object using these attributes is shown below.
 
 ```javascript
 var data = {
-	labels: ["January", "February", "March", "April", "May", "June", "July"],
+	labels: ["Monday", "Tuesday", "Wednesday", "Thusday", "Friday", "Saturday", "Sunday"],
 	datasets: [
 		{
 			label: "My First dataset",
@@ -63,7 +63,7 @@ var data = {
 			borderWidth: 1,
 			hoverBackgroundColor: "rgba(255,99,132,0.4)",
 			hoverBorderColor: "rgba(255,99,132,1)",
-			data: [65, 59, 80, 81, 56, 55, 40],
+			data: [6, 5, 8, 8, 5, 0, 0],
 		}
 	]
 };
