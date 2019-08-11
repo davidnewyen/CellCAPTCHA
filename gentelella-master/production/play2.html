@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+      <style>
+#div1, #div2, #div3, #div4 {
+  width: 40%;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+    background: white;
+    margin-left: 30%;
+    margin-right: 30%
+}
+</style>
+      <script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+      </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -66,6 +92,7 @@
                     <li><a><i class="fa fa-list-alt"></i> Rules </a>
                   </li>
                     <li><a><i class="fa fa-bug"></i> Play <span class="fa fa-chevron-down"></span></a>                         <ul class="nav child_menu">                           <li><a href="play1.html">Game 1 - How old am I ?</a></li>                           <li><a href="play2.html">Game 2 - From youngest to oldest </a></li>                         <li><a href="play3.html">Game 3 - Who is the intruder ? </a></li>                         </ul>                   </li>
+                    <li><a href="captcha.html"><i class="fa fa-circle-o-notch "></i> Try our captcha! </a>
                     
                 </ul>
               </div>
@@ -214,41 +241,70 @@
                         </div>
 
                         <!-- Middle content -->
-                        <div>
+<div>
                             <h2 style="text-align: center; margin: 25px;font-size: 24px"> Can you put the images in the right order ? </h2>
+    
                             <table style="width:100%; margin: 20px; padding: 10px; text-align: center ">
                                 <tr>
                                     
                                     <!-- left side -->
                                     <td style="width: 25%">
-                                        <img src="images/ordering1.png">
+                                        <img id="drag1" src="images/ordering1.png" draggable="true" ondragstart="drag(event)">
                                     </td>
                                     <td style="width: 25%">
-                                        <img src="images/ordering2.png">
+                                        <img id="drag2" src="images/ordering2.png" draggable="true" ondragstart="drag(event)">
                                     </td>
                                     <td style="width: 25%">
-                                        <img src="images/ordering3.png">
+                                        <img id="drag3" src="images/ordering3.png" draggable="true" ondragstart="drag(event)">
                                     </td>
                                     <td style="width: 25%">
-                                        <img src="images/ordering4.png">
+                                        <img id="drag4" src="images/ordering4.png" draggable="true" ondragstart="drag(event)">
                                     </td>
-                                </tr>
-                                <tr>
-                                <th style="text-align: center"><h5>Image 1</h5></th>
-                                <th style="text-align: center"><h5>Image 2</h5></th>
-                                <th style="text-align: center"><h5>Image 3</h5></th>
-                                <th style="text-align: center"><h5>Image 4</h5></th>
-                                </tr>
-                                <tr>
-                                <th colspan="4" />
-                                </tr>
-                                <tr>
-                                <th style="text-align: center"><button style=" border:none; min-height: 30px" type="button" class="btn btn-default btn-lg"></button></th>
-                                <th style="text-align: center"><button style=" border:none; min-height: 30px" type="button" class="btn btn-default btn-lg"></button></th>
-                                <th style="text-align: center"><button style=" border:none; min-height: 30px" type="button" class="btn btn-default btn-lg"></button></th>
-                                <th style="text-align: center"><button style=" border:none; min-height: 30px" type="button" class="btn btn-default btn-lg"></button></th>
                                 </tr>
                             </table>
+    
+                        <div id="wizard" class="form_wizard wizard_horizontal">
+                      <ul class="wizard_steps">
+                        <li>
+                          <a href="#step-1">
+                            <span class="step_no">1</span>
+                              <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            <span class="step_descr">
+                                              From the youngest...
+                                          </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#step-2">
+                            <span class="step_no">2</span>
+                              <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            <span class="step_descr">
+                                              ...
+                                          </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#step-3">
+                            <span class="step_no">3</span>
+                              <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            <span class="step_descr">
+                                              ...
+                                          </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#step-4">
+                            <span class="step_no">4</span>
+                              <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            <span class="step_descr">
+                                              ... To the oldest
+                                          </span>
+                          </a>
+                        </li>
+                      </ul>
+                        </div>
+                                                
+                            
                         </div>
 
                         <!-- Bottom banner -->
